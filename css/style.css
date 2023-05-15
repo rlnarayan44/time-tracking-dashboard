@@ -1,0 +1,304 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    font-family: 'Rubik', sans-serif;
+}
+
+.container{
+    width: 250px;
+    height: 1090px;
+    background-color: hsl(226, 43%, 10%);
+    margin: 0 auto;
+    padding: 50px 10px 50px 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.personal{
+    width: 95%;
+    flex-basis: 15%;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.info{    
+    width: 100%;    
+    height: 65%;    
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+img{
+    width: 20%; 
+    height: auto;
+    padding-left: 5%;
+    filter: drop-shadow(2px 0 0 white)
+        drop-shadow(0 2px 0 white)
+        drop-shadow(-2px 0 0 white)
+        drop-shadow(0 -2px 0 white);
+}
+
+.title{
+    font-size: 0.55rem;
+    padding: 0 0 0 5%;
+    color: hsl(236, 100%, 87%);
+    font-weight: 300;
+}
+
+.name{
+    font-size: 1.3rem;
+    padding: 0 0 0 18%;
+    color: hsl(236, 100%, 87%);
+    font-weight: 300;
+}
+
+.name>div{
+    display: inline;
+}
+
+.daily{    
+    text-align: center;
+    flex: 1 1 auto;
+    color: hsl(236, 100%, 87%);    
+}
+
+.weekly{
+    text-align: center;
+    flex: 1 1 auto;
+    color: hsl(235, 45%, 61%);
+}
+
+.monthly{
+    text-align: center;
+    flex: 1 1 auto;
+    color: hsl(235, 45%, 61%);
+}
+
+.daily>span:hover, .weekly>span:hover, .monthly>span:hover{
+    cursor: pointer;
+}
+
+.work, .play, .study, .exercise, .social, .selfcare{
+    box-sizing: border-box;
+    width: 95%;
+    flex-basis: 12%;
+    border-radius: 10px;
+    position: relative;   
+}
+
+.work{
+    background-color: hsl(15, 100%, 70%);
+}
+
+.play{
+    background-color: hsl(195, 74%, 62%);
+}
+
+.study{
+    background-color: hsl(348, 100%, 68%);    
+}
+
+.exercise{
+    background-color: hsl(145, 58%, 55%);    
+}
+
+.social{
+    background-color: hsl(264, 64%, 52%);    
+}
+
+.selfcare{
+    background-color: hsl(43, 84%, 65%);    
+}
+
+.metric{
+    box-sizing: border-box;
+    background-color: hsl(235, 46%, 20%);
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    top: 25%;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly; 
+}
+
+.one, .two, .three, .four{
+    flex: 1 1 40%;
+}
+
+.one{    
+    padding: 10% 0 0 5%;
+    font-size: 0.8rem;
+    font-weight: 400;    
+    color: aliceblue;
+}
+
+.two{
+    text-align: right;
+    padding: 6% 5% 0 0;
+    color: hsl(236, 100%, 87%);
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.three{
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: hsl(236, 100%, 87%);
+    color: aliceblue;
+    padding: 0 0 5% 5%;
+}
+
+.four{
+    color: hsl(236, 100%, 87%);
+    text-align: right;
+    font-size: 10px;
+    font-weight: 400;
+    padding: 5% 5% 0 0;
+}
+
+@media screen and (min-width: 578px) {
+    body{
+        display: flex;
+        align-items: center;        
+    }
+
+    .container{
+        width: 100%;
+        height: 80%;             
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1%;
+        justify-content: space-around;
+        align-content: center;
+        align-items: stretch;
+    }
+
+    .personal{
+        width: unset;
+        grid-row: 1 / 3;
+        flex-direction: column;
+        align-items: flex-start;
+    }    
+
+    .info{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    img{
+        padding: 15px 0 0 15px;
+    }
+
+    .title{
+        padding: 20px 0 0 15px;
+    }
+
+    .name>div{
+        display: block;
+    }
+
+    .daily, .weekly, .monthly{
+        padding: 10px 0 0 15px;
+    }
+
+    .one{
+        padding-left: 10%;
+    }
+
+    .two{
+        padding-right: 10%;
+    }
+
+    .three{
+        flex: 1 1 80%;
+        padding: 10% 0 0 10%;        
+    }
+
+    .four{
+        flex: 1 1 80%;
+        padding: 0 0 0 10%;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+    }
+
+    .container{
+        width: 1080px;
+        height: 80%;             
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1%;
+        justify-content: space-around;
+        align-content: center;
+        align-items: stretch;
+    }
+
+    .personal{
+        width: unset;
+        grid-row: 1 / 3;
+        flex-direction: column;
+        align-items: flex-start;
+    }    
+
+    .info{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    img{
+        padding: 15px 0 0 15px;
+    }
+
+    .title{
+        padding: 20px 0 0 15px;
+    }
+
+    .name>div{
+        display: block;
+    }
+
+    .daily, .weekly, .monthly{
+        padding: 10px 0 0 15px;
+    }
+
+    .one{
+        padding-left: 10%;
+    }
+
+    .two{
+        padding-right: 10%;
+    }
+
+    .three{
+        flex: 1 1 80%;
+        padding: 10% 0 0 10%;        
+    }
+
+    .four{
+        flex: 1 1 80%;
+        padding: 0 0 0 10%;
+        text-align: left;
+    }
+}
